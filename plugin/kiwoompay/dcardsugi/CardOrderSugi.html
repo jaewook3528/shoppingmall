@@ -1,0 +1,70 @@
+<html>
+<head>
+<title>신용카드 - 배치결제 페이지</title>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta http-equiv="Pragma" content="no-cache">
+
+<script type="text/javascript">
+var pf;
+
+
+
+function fnSubmit() {
+	var fileName;
+	fileName = "./CardOrderSugi.php";		
+	
+	pf = document.frmConfirm;
+
+	pf.action = fileName;
+	pf.method = "post";
+	pf.submit();
+}
+
+</script>
+
+</head>
+
+<BODY>
+
+<form name="frmConfirm" action=""> 
+<!-- 상점ID -->
+상점아이디		 : <input type="text" name="CPID" value=""><br>
+<!-- 주문번호 -->
+주문번호   : <input type="text" name="ORDERNO" value=""><br>
+<!-- 상품구분 -->
+상품구분(디지털/실물)  : <input type="text" name="PRODUCTTYPE" value="1"><br>
+<!-- 과금유형 13:카드번호+유효기간+비밀번호+생년월일, 18: 카드번호+유효기간 -->
+과금유형  : <input type="text" name="BILLTYPE" value="18"><br>
+<!-- 과세비과세 -->
+과세비과세  : <input type="text" name="TAXFREECD" value="00"><br>
+<!-- 할부개월 -->
+할부개월    : <input type="text" name="QUOTA" value="00"><br>
+<!-- 결제금액 -->
+결제금액    : <input type="text" name="AMOUNT" value="1000"><br>
+
+<!-- 카드번호 -->
+카드번호    : <input type="text" name="CARDNO" value=""><br>
+<!-- 고객아이피 -->
+고객아이피           : <input type="text" name="IPADDRESS" value=""><br>
+<!-- USERID -->
+USERID           : <input type="text" name="USERID" value=""><br>
+<!-- USERNAME -->
+USERNAME           : <input type="text" name="USERNAME" value=""><br>
+<!-- PRODUCTCODE -->
+상품코드           : <input type="text" name="PRODUCTCODE" value=""><br>
+<!-- PRODUCTNAME -->
+상품명          : <input type="text" name="PRODUCTNAME" value=""><br>
+<!-- RESERVEDINDEX1 -->
+예약항목1          : <input type="text" name="RESERVEDINDEX1" value=""><br>
+<!-- RESERVEDINDEX2 -->
+예약항목2           : <input type="text" name="RESERVEDINDEX2" value=""><br>
+<!-- RESERVEDSTRING -->
+예약스트링           : <input type="text" name="RESERVEDSTRING" value=""><br>
+
+<input name="btnSubmit" type="button" value="Batch" onclick="fnSubmit()" ><br>
+</form>
+</BODY>
+</HTML>
+

@@ -1,0 +1,9 @@
+User-agent: Yeti
+Allow: /
+Disallow: /private */
+Disallow: /admin/
+Disallow: /mypage/
+Disallow: /data/
+
+Disallow: /shop/view.php?index_no=46
+Disallow: /shop/view.php?index_no=47

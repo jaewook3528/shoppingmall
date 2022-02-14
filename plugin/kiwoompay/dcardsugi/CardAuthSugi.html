@@ -1,0 +1,60 @@
+<html>
+<head>
+<title>신용카드 - 배치결제 페이지</title>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta http-equiv="Pragma" content="no-cache">
+
+<script type="text/javascript">
+var pf;
+
+
+
+function fnSubmit() {
+	var fileName;
+	fileName = "./CardAuthSugi.php";		
+	
+	pf = document.frmConfirm;
+
+
+	pf.action = fileName;
+	pf.method = "post";
+	pf.submit();
+}
+
+</script>
+
+</head>
+
+<BODY>
+
+<form name="frmConfirm" action=""> 
+<!-- 상점ID -->
+상점아이디		 : <input type="text" name="CPID" value=""><br>
+<!-- 다우거래번호번호 -->
+다우거래번호   : <input type="text" name="DAOUTRX" value=""><br>
+<!-- 고객이메일 -->
+고객이메일  : <input type="text" name="USEREMAIL" value=""><br>
+<!-- 고객휴대폰번호 -->
+고객휴대폰번호  : <input type="text" name="USERMOBILENO" value=""><br>
+<!-- AMOUNT -->
+결제금액  : <input type="text" name="AMOUNT" value="1000"><br>
+<!-- QUOTA -->
+할부개월수    : <input type="text" name="QUOTA" value="00"><br>
+<!-- NOINTFLAG -->
+할부여부           : <input type="text" name="NOINTFLAG" value="N"><br>
+<!-- ENCDATA1 카드번호-->
+ENCDATA1  : <input type="text" name="ENCDATA1" value=""><br>
+<!-- ENCDATA2 카드유효기간-->
+ENCDATA2 : <input type="text" name="ENCDATA2" value=""><br>
+<!-- ENCDATA3 카드비밀번호 BILLTYPE이 13인경우만 사용, 아니면 빈 값 전송-->
+ENCDATA3 : <input type="text" name="ENCDATA3" value=""><br>
+<!-- ENCDATA4 생년월일6자리 또는 사업자 10자리 BILLTYPE이 13인경우만 사용, 아니면 빈 값 전송-->
+ENCDATA4  : <input type="text" name="ENCDATA4" value=""><br>		
+
+<input name="btnSubmit" type="button" value="Batch" onclick="fnSubmit()" ><br>
+</form>
+</BODY>
+</HTML>
+

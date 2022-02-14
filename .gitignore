@@ -1,0 +1,5 @@
+.vscode/*
+admin/myadmin3/*
+*.log
+_image/*
+data/*

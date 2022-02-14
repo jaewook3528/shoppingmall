@@ -1,0 +1,42 @@
+<html>
+<head>
+<title>신용카드 - 취소 페이지</title>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta http-equiv="Pragma" content="no-cache">
+
+<script type="text/javascript">
+var pf;
+
+
+
+function fnSubmit() {
+	var fileName;
+	fileName = "./CardCancel.php";		
+	
+	pf = document.frmConfirm;
+
+
+	pf.action = fileName;
+	pf.method = "post";
+	pf.submit();
+}
+
+</script>
+
+</head>
+
+<BODY>
+
+<form name="frmConfirm" action=""> 
+CPID : <input type=text name=CPID value=""><br>
+DAOUTRX  : <input type=text name=DAOUTRX   value=""><br>
+AMOUNT         : <input type=text name=AMOUNT         value=""><br>
+IPADDRESS         : <input type=text name=IPADDRESS         value=""><br>
+CANCELMEMO         : <input type=text name=CANCELMEMO         value=""><br>
+<input name="btnSubmit" type="button" value="취소하기" onclick="fnSubmit()" ><br>
+</form>
+</BODY>
+</HTML>
+
